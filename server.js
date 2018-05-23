@@ -2,6 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var hbs = require('hbs');
 
+const port = process.env.PORT || 5200;
 app = express();
 app.use('/assets',express.static('assets'));
 app.set('view engine','hbs');
@@ -16,6 +17,6 @@ var obj = {age : 21,name: "Pratyush"};
 app.get('/render',(req,res)=>{
   res.render('help.hbs',obj);
 });
-app.listen(3000,()=>{
-  console.log('server is starting');
+app.listen(port, ()=>{
+  console.log(`server is starting in ${port}`);
 });
