@@ -1,0 +1,9 @@
+.wrapper{
+  margin: 0px auto;
+  min-width: 960px;
+  background: #ccc;
+}
+.para{
+  display: flex;
+  justify-content: center;
+}
